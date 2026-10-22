@@ -1,0 +1,8 @@
+{
+  "name": "JARVIS NEXUS — Personal AI Voice Assistant",
+  "description": "Tactical futuristic AI voice assistant for Windows and Android with wake-word detection, multilingual Hindi/Hinglish/English voice engine, holographic HUD reactor, real command skills, and encrypted remote control.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0f141b;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes pulse-cyan{0%,100%{opacity:1;box-shadow:0 0 10px #00f0ff;}50%{opacity:0.35;box-shadow:0 0 2px #00f0ff;}}@keyframes wave-bounce{0%,100%{height:4px;}50%{height:16px;}}.glow-dot{animation:pulse-cyan 2s infinite ease-in-out;}.wave-1{animation:wave-bounce 1.1s infinite ease-in-out;}.wave-2{animation:wave-bounce 0.8s infinite ease-in-out 0.2s;}.wave-3{animation:wave-bounce 1.3s infinite ease-in-out 0.4s;}.wave-4{animation:wave-bounce 0.9s infinite ease-in-out 0.1s;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#f1f6ff", "on-tertiary": "#1b324a", "surface-bright": "#343942", "inverse-primary": "#006970", "surface": "#0f141b", "on-surface-variant": "#b9cacb", "on-primary-container": "#006970", "on-secondary-fixed": "#001f26", "outline": "#849495", "on-secondary-fixed-variant": "#004e5d", "on-error": "#690005", "on-surface": "#dee2ed", "secondary-fixed": "#adecff", "tertiary-container": "#c4dbfa", "secondary": "#62d5f2", "background": "#0f141b", "inverse-surface": "#dee2ed", "secondary-fixed-dim": "#62d5f2", "surface-tint": "#00dbe9", "on-primary-fixed-variant": "#004f54", "surface-container-highest": "#30353d", "surface-dim": "#0f141b", "surface-container-lowest": "#090e16", "error": "#ffb4ab", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#324861", "outline-variant": "#3b494b", "on-tertiary-fixed": "#031d34", "on-secondary-container": "#002e38", "on-background": "#dee2ed", "on-tertiary-container": "#4a607a", "surface-container-low": "#171c23", "error-container": "#93000a", "primary-fixed": "#7df4ff", "on-primary-fixed": "#002022", "on-primary": "#00363a", "tertiary-fixed-dim": "#b2c8e6", "secondary-container": "#079eb9", "primary": "#dbfcff", "tertiary-fixed": "#d1e4ff", "surface-container-high": "#252a32", "primary-container": "#00f0ff", "primary-fixed-dim": "#00dbe9", "surface-variant": "#30353d", "surface-container": "#1b2027", "on-secondary": "#003640", "inverse-on-surface": "#2c3139" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-desktop": "2.5rem", "space-xl": "2.5rem", "gutter-tablet": "1.25rem", "space-xs": "0.25rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "1rem", "space-lg": "1.5rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "label-sm": ["JetBrains Mono"], "display-lg-mobile": ["Outfit"], "label-lg": ["JetBrains Mono"], "headline-lg": ["Outfit"], "body-md": ["Inter"], "headline-md": ["Outfit"], "body-lg": ["Inter"], "headline-sm": ["Outfit"], "body-sm": ["Inter"], "label-md": ["JetBrains Mono"], "display-lg": ["Outfit"] }, "fontSize": { "label-sm": ["9px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl"><div class="h-20 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="JARVIS Nexus Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwJixHXUv4MyMGCcRs2sJdMCiUNV3TlnHhIOC9HQCg4M2fUT88w6SrRl377ilvlHwIW8Z_SmdE_k_aDJjP50tTUN--tkUEzEwhEhimP6JOPdSLjF9F_6cqDelbH1cmEF2_xNul61PH7IQeRGcYyb68Zx8OcXPtHHoAR_pMC6PXkP3pKvAewuls0jXC1r2BbnO-yPoRGeO-RDE9-uN6hy7W9zHmz02yquOdmnuE0Wn61pNH0d8Blz_kVcI"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md text-secondary tracking-widest">NEXUS-V4.2</span><span class="w-1.5 h-1.5 rounded-full bg-primary-container glow-dot"></span><span class="font-headline-sm text-headline-sm text-on-surface hidden sm:inline-block">Transcript</span></div><span class="font-label-sm text-label-sm text-secondary-fixed-dim/90 tracking-tighter">ONLINE // NEURAL SYNC: 99.8%</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center gap-space-xs bg-surface-container-high/60 px-space-sm py-space-xs rounded-full backdrop-blur-md"><div class="flex items-center text-primary-fixed-dim"><span class="material-symbols-outlined text-[14px]">battery_charging_full</span><span class="font-label-sm text-label-sm text-on-surface ml-0.5">98%</span></div><span class="text-outline-variant font-label-sm text-label-sm">|</span><div class="flex items-center text-secondary"><span class="material-symbols-outlined text-[13px]">speed</span><span class="font-label-sm text-label-sm text-on-surface ml-0.5">14ms</span></div><span class="text-outline-variant font-label-sm text-label-sm">|</span><span class="material-symbols-outlined text-primary-container text-[14px]">mic</span><span class="material-symbols-outlined text-secondary-fixed-dim text-[14px]">hub</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-44 bg-surface flex-1 min-h-screen"><div class="flex flex-col w-full text-on-surface">
+<!-- Top Session Diagnostic Bar -->
+<section class="px-gutter pt-space-xs pb-space-sm flex flex-col gap-space-xs bg-surface-container-lowest/70 backdrop-blur-md">
+<div class="flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container glow-dot shrink-0"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider truncate text-secondary">SESSION #0941-OMEGA</span>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-[12px] text-primary-container">lock</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-tighter">AES-GCM-256</span>
+</div>
+</div>
+<!-- Telemetry Ticker -->
+<div class="flex items-center justify-between bg-surface-container-low/90 rounded-full px-space-sm py-1">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-outline">TOKENS:</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">1,420</span>
+</div>
+<span class="text-outline-variant text-[10px]">/</span>
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-outline">LATENCY:</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed">124ms</span>
+</div>
+<span class="text-outline-variant text-[10px]">/</span>
+<div class="flex items-center gap-1 truncate">
+<span class="font-label-sm text-label-sm text-outline">MOD:</span>
+<span class="font-label-sm text-label-sm text-primary-container truncate">REASONING-V4</span>
+</div>
+</div>
+<!-- Filter Stream Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5" id="stream-filters">
+<button class="filter-pill shrink-0 px-space-sm py-1 rounded-full bg-primary-container/20 text-primary-container font-label-sm text-label-sm shadow-[0_0_12px_rgba(0,240,255,0.25)] flex items-center gap-1" data-filter="all">
+<span class="w-1 h-1 rounded-full bg-primary-container"></span>
+<span>ALL STREAM</span>
+</button>
+<button class="filter-pill shrink-0 px-space-sm py-1 rounded-full bg-surface-container-high/60 text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface flex items-center gap-1" data-filter="voice">
+<span class="material-symbols-outlined text-[11px]">mic</span>
+<span>VOICE QUERY</span>
+</button>
+<button class="filter-pill shrink-0 px-space-sm py-1 rounded-full bg-surface-container-high/60 text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface flex items-center gap-1" data-filter="logs">
+<span class="material-symbols-outlined text-[11px]">terminal</span>
+<span>SYSTEM LOGS</span>
+</button>
+<button class="filter-pill shrink-0 px-space-sm py-1 rounded-full bg-surface-container-high/60 text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface flex items-center gap-1" data-filter="tools">
+<span class="material-symbols-outlined text-[11px]">integration_instructions</span>
+<span>EXTERNAL TOOLS</span>
+</button>
+</div>
+</section>
+<!-- Conversation Stream Container -->
+<div class="flex flex-col gap-space-md px-gutter pt-space-md pb-space-lg w-full max-w-2xl mx-auto">
+<!-- Timeline Timestamp Badge -->
+<div class="flex items-center justify-center gap-space-xs my-space-xs">
+<div class="h-px bg-surface-container-highest flex-1 max-w-[60px]"></div>
+<span class="font-label-sm text-label-sm text-outline px-space-xs uppercase tracking-widest">LIVE TRANSCRIPT // 09:42:15</span>
+<div class="h-px bg-surface-container-highest flex-1 max-w-[60px]"></div>
+</div>
+<!-- 1. USER SPEECH MESSAGE (09:42:15) -->
+<article class="flex flex-col items-end gap-space-xs w-full pl-6">
+<div class="flex items-center gap-space-xs pr-1">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim tracking-wider">09:42:15</span>
+<span class="font-label-sm text-label-sm text-primary-container bg-surface-container-high/80 px-1.5 py-0.5 rounded-full">VOICE INPUT [99.4%]</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">YOU</span>
+</div>
+<div class="w-full bg-surface-container-high/90 backdrop-blur-md rounded-2xl rounded-tr-none p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-24 h-24 bg-primary-container/5 rounded-full blur-xl pointer-events-none"></div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          “JARVIS, run a full diagnostic on the neural link and pull the latest telemetry from the primary workstation.”
+        </p>
+<!-- Mini Audio Chip -->
+<div class="flex items-center justify-between bg-surface-container-lowest/80 rounded-full px-space-sm py-1 self-start gap-space-sm mt-1">
+<button aria-label="Playback speech audio" class="w-6 h-6 rounded-full bg-primary-container/20 text-primary-container flex items-center justify-center shrink-0 active:scale-90 transition-transform" id="btn-play-voice">
+<span class="material-symbols-outlined text-[14px]">play_arrow</span>
+</button>
+<!-- SVG Audio Waveform Mini -->
+<div class="flex items-center gap-[2px] h-3.5 px-0.5">
+<span class="w-[2px] h-1.5 bg-primary-container rounded-full"></span>
+<span class="w-[2px] h-3 bg-secondary rounded-full"></span>
+<span class="w-[2px] h-2 bg-primary-container rounded-full"></span>
+<span class="w-[2px] h-3.5 bg-primary-fixed rounded-full"></span>
+<span class="w-[2px] h-1 bg-secondary rounded-full"></span>
+<span class="w-[2px] h-2.5 bg-primary-container rounded-full"></span>
+<span class="w-[2px] h-1 bg-secondary-fixed rounded-full"></span>
+<span class="w-[2px] h-2 bg-primary-container rounded-full"></span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant pr-1">0:04s</span>
+</div>
+</div>
+</article>
+<!-- 2. JARVIS AI RESPONSE (09:42:16) -->
+<article class="flex flex-col items-start gap-space-xs w-full pr-4">
+<div class="flex items-center gap-space-xs pl-1">
+<div class="w-2 h-2 rounded-full bg-primary-container glow-dot"></div>
+<span class="font-label-sm text-label-sm text-primary-container font-semibold tracking-wider">JARVIS NEXUS</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">[AI ENGINE]</span>
+<span class="font-label-sm text-label-sm text-outline">09:42:16</span>
+</div>
+<div class="w-full bg-surface-container-low/95 backdrop-blur-xl rounded-2xl rounded-tl-none p-space-md shadow-xl flex flex-col gap-space-md relative overflow-hidden">
+<!-- Ambient HUD Reticle Accent (SVG top-right) -->
+<div class="absolute right-2 top-2 opacity-30 pointer-events-none">
+<svg class="w-8 h-8 text-secondary" fill="none" viewbox="0 0 32 32">
+<path d="M4 10V4H10" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M28 10V4H22" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<circle cx="16" cy="16" fill="currentColor" fill-opacity="0.4" r="3"></circle>
+</svg>
+</div>
+<!-- Chain-of-Thought / Reasoning Box -->
+<div class="flex flex-col bg-surface-container-lowest/80 rounded-xl p-space-sm gap-space-xs">
+<div class="flex items-center justify-between cursor-pointer py-0.5" id="reasoning-toggle">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">Synthesized Reasoning Trace (3 steps)</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>EXPAND</span>
+<span class="material-symbols-outlined text-[14px]" id="reasoning-arrow">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 pl-1 text-on-surface-variant font-label-sm text-label-sm" id="reasoning-body">
+<div class="flex items-start gap-1.5 text-secondary-fixed-dim">
+<span class="text-primary-container">›</span>
+<span class="font-label-sm text-label-sm">Querying local daemon over WebSocket ws://127.0.0.1:8765</span>
+</div>
+<div class="flex items-start gap-1.5 text-secondary-fixed-dim">
+<span class="text-primary-container">›</span>
+<span class="font-label-sm text-label-sm">Workstation load: CPU 18%, GPU Memory 3.2GB/16GB, Thermal: Nominal</span>
+</div>
+<div class="flex items-start gap-1.5 text-secondary-fixed-dim">
+<span class="text-primary-container">›</span>
+<span class="font-label-sm text-label-sm">Synthesizing concise tactical overview...</span>
+</div>
+</div>
+</div>
+<!-- Synthesized Verbal Statement -->
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          All neural pipelines are operating at peak efficiency, Sir. Primary workstation reports zero packet loss and 14ms ping. I've prepared the resource allocations on your secondary display.
+        </p>
+<!-- Dynamic Visual Data Card (Inspiration Reticle Framing) -->
+<div class="bg-surface-container-high/70 rounded-xl p-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary-container">speed</span>
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase font-semibold">TELEMETRY SUMMARY</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-container/20 text-primary-container font-label-sm text-label-sm">NOMINAL</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">LINK #01</span>
+</div>
+<!-- Mini Tactical Visualizer SVG -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest/60 rounded-lg p-space-xs">
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+<svg class="w-14 h-14 -rotate-90" viewbox="0 0 48 48">
+<circle class="stroke-surface-container-highest" cx="24" cy="24" fill="none" r="19" stroke-dasharray="3 3" stroke-width="3"></circle>
+<circle class="stroke-primary-container" cx="24" cy="24" fill="none" r="19" stroke-dasharray="100 120" stroke-linecap="round" stroke-width="3"></circle>
+<circle class="stroke-secondary" cx="24" cy="24" fill="none" r="12" stroke-dasharray="2 2" stroke-width="1.5"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-label-sm text-[10px] text-primary-fixed leading-none">99.8</span>
+<span class="font-label-sm text-[7px] text-outline-variant uppercase">SYNC</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-space-sm gap-y-1 flex-1 font-label-sm text-label-sm">
+<div class="flex flex-col">
+<span class="text-outline text-[9px] uppercase">CPU CLUSTERS</span>
+<span class="text-on-surface font-semibold">18.4% ACTIVE</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[9px] uppercase">VRAM MATRIX</span>
+<span class="text-on-surface font-semibold">3.2 / 16 GB</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[9px] uppercase">NEURAL BUS</span>
+<span class="text-secondary font-semibold">0.00% LOSS</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-[9px] uppercase">THERMAL JUNC</span>
+<span class="text-primary-container font-semibold">41°C STABLE</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="px-space-sm py-1 rounded-full bg-secondary-container/20 text-secondary hover:bg-secondary-container/30 active:scale-95 transition-all font-label-sm text-label-sm flex items-center gap-1" id="btn-mirror">
+<span class="material-symbols-outlined text-[13px]">cast</span>
+<span>MIRROR TO HUD-2</span>
+</button>
+<div class="flex items-center gap-2">
+<button aria-label="Copy telemetry data" class="text-outline hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+</button>
+<button aria-label="Pin telemetry summary" class="text-outline hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-[15px]">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- 3. USER SECOND DIRECTIVE (09:43:01) -->
+<article class="flex flex-col items-end gap-space-xs w-full pl-6">
+<div class="flex items-center gap-space-xs pr-1">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim">09:43:01</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">YOU</span>
+</div>
+<div class="w-full bg-surface-container-high/90 backdrop-blur-md rounded-2xl rounded-tr-none p-space-md shadow-md flex flex-col gap-space-xs">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          “Set a high-priority reminder to review the orbital drone telemetry at 16:30 and ping Marcus on secure channel.”
+        </p>
+</div>
+</article>
+<!-- 4. ACTIVE LIVE PROCESSING / THINKING STATE (09:43:02) -->
+<article class="flex flex-col items-start gap-space-xs w-full pr-2">
+<div class="flex items-center gap-space-xs pl-1">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary-container font-semibold tracking-wider">JARVIS REASONING CORE</span>
+<span class="font-label-sm text-label-sm text-secondary">09:43:02</span>
+</div>
+<!-- Living Holographic Inference Card -->
+<div class="w-full bg-surface-container-lowest/80 backdrop-blur-xl rounded-2xl rounded-tl-none p-space-md shadow-xl flex flex-col gap-space-sm relative overflow-hidden">
+<!-- Cyan gradient glow shimmer -->
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container/10 via-transparent to-secondary/10 pointer-events-none"></div>
+<div class="flex items-center gap-space-xs">
+<!-- Animated Radar Pulsing Visual -->
+<div class="w-5 h-5 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary-container animate-spin">cyclone</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium tracking-wide">JARVIS IS PARSING DIRECTIVES &amp; DISPATCHING TASKS...</span>
+</div>
+<!-- Micro Step Tracker -->
+<div class="flex flex-col gap-1.5 mt-1 font-label-sm text-label-sm">
+<!-- Task 1: Complete -->
+<div class="flex items-center justify-between bg-surface-container-low/60 rounded-lg px-space-sm py-1.5">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px] text-primary-container">check_circle</span>
+<span class="text-on-surface font-label-sm text-label-sm">[1/2] Creating reminder in System Hub (16:30 TACTICAL)</span>
+</div>
+<span class="font-label-sm text-[10px] text-primary-container font-semibold">DONE</span>
+</div>
+<!-- Task 2: Pending/Resolving -->
+<div class="flex items-center justify-between bg-surface-container-high/40 rounded-lg px-space-sm py-1.5">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed animate-pulse"></span>
+<span class="text-secondary font-label-sm text-label-sm">[2/2] Resolving secure contact “Marcus” on Quantum Bus...</span>
+</div>
+<span class="font-label-sm text-[10px] text-secondary font-semibold">PENDING</span>
+</div>
+</div>
+<!-- Ambient Waveform Strip -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-[10px] text-outline">ALLOCATED GPU NODES:</span>
+<span class="font-label-sm text-[10px] text-primary-fixed">#A12, #A14</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container glow-dot"></span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">INFERENCE SPEED: 68 TOK/S</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Real-Time Floating Command Deck -->
+<aside class="sticky bottom-0 w-full px-gutter pb-space-sm pt-space-xs bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/90 to-transparent">
+<div class="max-w-2xl mx-auto flex flex-col gap-space-xs">
+<!-- Fast Action Shortcut Tags -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5">
+<button class="quick-chip shrink-0 px-space-sm py-0.5 rounded-full bg-surface-container-high/80 text-on-surface-variant hover:text-primary font-label-sm text-[10px] transition-all active:scale-95 flex items-center gap-1">
+<span class="text-primary-container">+</span>
+<span>SYNC SATELLITE HUD</span>
+</button>
+<button class="quick-chip shrink-0 px-space-sm py-0.5 rounded-full bg-surface-container-high/80 text-on-surface-variant hover:text-primary font-label-sm text-[10px] transition-all active:scale-95 flex items-center gap-1">
+<span class="text-primary-container">+</span>
+<span>ORBITAL RECON (16:30)</span>
+</button>
+<button class="quick-chip shrink-0 px-space-sm py-0.5 rounded-full bg-surface-container-high/80 text-on-surface-variant hover:text-primary font-label-sm text-[10px] transition-all active:scale-95 flex items-center gap-1">
+<span class="text-primary-container">+</span>
+<span>SILENT PROTOCOL</span>
+</button>
+</div>
+<!-- Directive Prompt Input Cockpit -->
+<div class="relative flex items-center bg-surface-container-low/95 rounded-2xl shadow-2xl p-1.5 backdrop-blur-xl">
+<div class="pl-space-sm pr-space-xs flex items-center text-primary-container pointer-events-none">
+<span class="font-label-md text-label-md select-none font-bold">&gt;</span>
+</div>
+<input class="w-full bg-transparent py-space-xs text-on-surface placeholder:text-outline-variant font-label-md text-label-md focus:outline-none" id="directive-input" placeholder="Type tactical directive or speech trigger..." type="text"/>
+<div class="flex items-center gap-space-xs pr-1 shrink-0">
+<!-- Quick Interrupt / Stop -->
+<button class="h-8 px-2 rounded-full bg-surface-container-highest text-error font-label-sm text-label-sm flex items-center gap-1 hover:bg-error-container hover:text-on-error-container active:scale-95 transition-all" id="btn-interrupt" title="Interrupt AI Generation">
+<span class="material-symbols-outlined text-[14px]">close</span>
+<span class="hidden sm:inline">HALT</span>
+</button>
+<!-- Voice Mic Trigger -->
+<button class="w-9 h-9 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center shadow-[0_0_12px_rgba(0,240,255,0.4)] active:scale-90 transition-transform" id="btn-voice-input" title="Activate Voice Input">
+<span class="material-symbols-outlined text-[18px]">mic</span>
+</button>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<script>
+  (function initJarvisTranscript() {
+    // Reasoning accordion toggle
+    const toggleBtn = document.getElementById('reasoning-toggle');
+    const body = document.getElementById('reasoning-body');
+    const arrow = document.getElementById('reasoning-arrow');
+
+    if (toggleBtn && body && arrow) {
+      let expanded = true;
+      toggleBtn.addEventListener('click', () => {
+        expanded = !expanded;
+        if (expanded) {
+          body.classList.remove('hidden');
+          arrow.textContent = 'expand_more';
+        } else {
+          body.classList.add('hidden');
+          arrow.textContent = 'chevron_right';
+        }
+      });
+    }
+
+    // Filter pill active selection
+    const filterButtons = document.querySelectorAll('.filter-pill');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.className = 'filter-pill shrink-0 px-space-sm py-1 rounded-full bg-surface-container-high/60 text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface flex items-center gap-1';
+        });
+        btn.className = 'filter-pill shrink-0 px-space-sm py-1 rounded-full bg-primary-container/20 text-primary-container font-label-sm text-label-sm shadow-[0_0_12px_rgba(0,240,255,0.25)] flex items-center gap-1';
+      });
+    });
+
+    // Quick chip auto-fill input
+    const quickChips = document.querySelectorAll('.quick-chip');
+    const input = document.getElementById('directive-input');
+    quickChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const text = chip.querySelector('span:last-child')?.textContent || '';
+        if (input) {
+          input.value = text;
+          input.focus();
+        }
+      });
+    });
+
+    // Voice record button pulse animation
+    const voiceBtn = document.getElementById('btn-voice-input');
+    if (voiceBtn) {
+      let recording = false;
+      voiceBtn.addEventListener('click', () => {
+        recording = !recording;
+        if (recording) {
+          voiceBtn.classList.add('animate-pulse');
+          voiceBtn.classList.replace('bg-primary-container', 'bg-error');
+          if (input) input.placeholder = 'JARVIS listening to vocal telemetry...';
+        } else {
+          voiceBtn.classList.remove('animate-pulse');
+          voiceBtn.classList.replace('bg-error', 'bg-primary-container');
+          if (input) input.placeholder = 'Type tactical directive or speech trigger...';
+        }
+      });
+    }
+
+    // Mirror to HUD trigger feedback
+    const mirrorBtn = document.getElementById('btn-mirror');
+    if (mirrorBtn) {
+      mirrorBtn.addEventListener('click', () => {
+        const span = mirrorBtn.querySelector('span:last-child');
+        if (span) {
+          span.textContent = 'MIRRORED (HUD-2)';
+          setTimeout(() => {
+            span.textContent = 'MIRROR TO HUD-2';
+          }, 2400);
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl" data-active-classes="text-primary-container drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] font-semibold"><div class="max-w-md mx-auto px-gutter pt-space-xs pb-space-xs flex flex-col gap-space-xs"><div class="flex items-center justify-between bg-surface-container-low/75 rounded-full px-space-md py-space-xs"><div class="flex items-center gap-space-xs"><div class="flex items-end gap-[2px] h-4 w-12 px-space-xs justify-center"><div class="w-[2px] bg-primary-container rounded-full wave-1"></div><div class="w-[2px] bg-secondary rounded-full wave-2"></div><div class="w-[2px] bg-primary rounded-full wave-3"></div><div class="w-[2px] bg-secondary-container rounded-full wave-4"></div></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">VOX: READY</span></div><div class="flex items-center gap-space-sm"><button class="w-11 h-11 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container transition-all active:scale-95"><span class="material-symbols-outlined text-[22px]">mic</span></button><button class="h-9 px-space-sm rounded-full bg-surface-container-highest/60 flex items-center gap-1 text-error active:scale-95"><span class="material-symbols-outlined text-[16px]">stop_circle</span><span class="font-label-sm text-label-sm">HALT</span></button></div></div><div class="flex justify-around items-center h-14"><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-all" data-path="core-hud" href="#"><span class="material-symbols-outlined text-[20px]">view_in_ar</span><span class="font-label-sm text-label-sm">Core HUD</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] transition-all text-primary-container drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] font-semibold" data-path="transcript" href="#"><span class="material-symbols-outlined text-[20px]">forum</span><span class="font-label-sm text-label-sm">Transcript</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-all" data-path="command" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span><span class="font-label-sm text-label-sm">Command</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-all" data-path="diagnostics" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-sm text-label-sm">Diagnostics</span></a></div></div></nav></body></html>

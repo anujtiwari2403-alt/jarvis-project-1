@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-void: #05080d;
+    --surface-base: #080d14;
+    --surface-panel: #0f141b;
+    --surface-elevated: #171c23;
+    --cyan-core: #00f0ff;
+    --ice-blue: #62d5f2;
+    --tech-slate: #4a607a;
+    --status-synced: #00e599;
+    --status-amber: #ffb020;
+    --status-error: #ff3b56;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #05080d;
+    color: #dee2ed;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: #00f0ff;
+    color: #05080d;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080d14;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #252a32;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00f0ff44;
+  }
+}
+
+/* Typography Utility Classes */
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+.font-mono-tech {
+  font-family: 'JetBrains Mono', monospace;
+}
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Animations for Holographic AI Reactor */
+@keyframes spin-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes spin-ccw {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); opacity: 0.15; }
+  50% { opacity: 0.45; }
+  100% { transform: rotate(360deg); opacity: 0.15; }
+}
+@keyframes pulse-core-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.45)) drop-shadow(0 0 35px rgba(0, 240, 255, 0.2));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 28px rgba(0, 240, 255, 0.85)) drop-shadow(0 0 60px rgba(98, 213, 242, 0.4));
+    transform: scale(1.03);
+  }
+}
+@keyframes pulse-cyan {
+  0%, 100% { opacity: 1; box-shadow: 0 0 10px #00f0ff; }
+  50% { opacity: 0.35; box-shadow: 0 0 2px #00f0ff; }
+}
+@keyframes wave-bounce {
+  0%, 100% { height: 12%; }
+  50% { height: 95%; }
+}
+
+.anim-spin-slow {
+  animation: spin-cw 36s linear infinite;
+}
+.anim-spin-reverse {
+  animation: spin-ccw 24s linear infinite;
+}
+.anim-spin-fast {
+  animation: spin-cw 12s linear infinite;
+}
+.anim-radar {
+  animation: radar-sweep 5s linear infinite;
+  transform-origin: center;
+}
+.anim-core {
+  animation: pulse-core-glow 3.4s ease-in-out infinite;
+}
+.glow-dot {
+  animation: pulse-cyan 2s infinite ease-in-out;
+}
+
+/* HUD Reticle Corners and Glass Styling */
+.hud-glass-panel {
+  background: rgba(15, 20, 27, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 240, 255, 0.14);
+  box-shadow: 0 0 24px -2px rgba(0, 240, 255, 0.05);
+}
+
+.hud-glass-elevated {
+  background: rgba(23, 28, 35, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(98, 213, 242, 0.22);
+  box-shadow: 0 0 30px -4px rgba(0, 240, 255, 0.12);
+}
+
+.hud-reticle-corner {
+  background-image:
+    linear-gradient(to right, #00f0ff 2px, transparent 2px),
+    linear-gradient(to bottom, #00f0ff 2px, transparent 2px),
+    linear-gradient(to left, #00f0ff 2px, transparent 2px),
+    linear-gradient(to bottom, #00f0ff 2px, transparent 2px),
+    linear-gradient(to right, #00f0ff 2px, transparent 2px),
+    linear-gradient(to top, #00f0ff 2px, transparent 2px),
+    linear-gradient(to left, #00f0ff 2px, transparent 2px),
+    linear-gradient(to top, #00f0ff 2px, transparent 2px);
+  background-position: left top, left top, right top, right top, left bottom, left bottom, right bottom, right bottom;
+  background-repeat: no-repeat;
+  background-size: 8px 8px;
+}

@@ -1,0 +1,252 @@
+---
+name: Tactical HUD Glass
+colors:
+  surface: '#0f141b'
+  surface-dim: '#0f141b'
+  surface-bright: '#343942'
+  surface-container-lowest: '#090e16'
+  surface-container-low: '#171c23'
+  surface-container: '#1b2027'
+  surface-container-high: '#252a32'
+  surface-container-highest: '#30353d'
+  on-surface: '#dee2ed'
+  on-surface-variant: '#b9cacb'
+  inverse-surface: '#dee2ed'
+  inverse-on-surface: '#2c3139'
+  outline: '#849495'
+  outline-variant: '#3b494b'
+  surface-tint: '#00dbe9'
+  primary: '#dbfcff'
+  on-primary: '#00363a'
+  primary-container: '#00f0ff'
+  on-primary-container: '#006970'
+  inverse-primary: '#006970'
+  secondary: '#62d5f2'
+  on-secondary: '#003640'
+  secondary-container: '#079eb9'
+  on-secondary-container: '#002e38'
+  tertiary: '#f1f6ff'
+  on-tertiary: '#1b324a'
+  tertiary-container: '#c4dbfa'
+  on-tertiary-container: '#4a607a'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#7df4ff'
+  primary-fixed-dim: '#00dbe9'
+  on-primary-fixed: '#002022'
+  on-primary-fixed-variant: '#004f54'
+  secondary-fixed: '#adecff'
+  secondary-fixed-dim: '#62d5f2'
+  on-secondary-fixed: '#001f26'
+  on-secondary-fixed-variant: '#004e5d'
+  tertiary-fixed: '#d1e4ff'
+  tertiary-fixed-dim: '#b2c8e6'
+  on-tertiary-fixed: '#031d34'
+  on-tertiary-fixed-variant: '#324861'
+  background: '#0f141b'
+  on-background: '#dee2ed'
+  surface-variant: '#30353d'
+typography:
+  display-lg:
+    fontFamily: Outfit
+    fontSize: 48px
+    fontWeight: '600'
+    lineHeight: 56px
+    letterSpacing: -0.02em
+  display-lg-mobile:
+    fontFamily: Outfit
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.01em
+  headline-lg:
+    fontFamily: Outfit
+    fontSize: 28px
+    fontWeight: '500'
+    lineHeight: 36px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Outfit
+    fontSize: 22px
+    fontWeight: '500'
+    lineHeight: 28px
+  headline-sm:
+    fontFamily: Outfit
+    fontSize: 18px
+    fontWeight: '500'
+    lineHeight: 24px
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 26px
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 22px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 18px
+  label-lg:
+    fontFamily: JetBrains Mono
+    fontSize: 13px
+    fontWeight: '500'
+    lineHeight: 18px
+    letterSpacing: 0.04em
+  label-md:
+    fontFamily: JetBrains Mono
+    fontSize: 11px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: 0.06em
+  label-sm:
+    fontFamily: JetBrains Mono
+    fontSize: 9px
+    fontWeight: '600'
+    lineHeight: 12px
+    letterSpacing: 0.08em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-tablet: 1.25rem
+  gutter-desktop: 1.5rem
+  margin: 1rem
+  margin-tablet: 1.5rem
+  margin-desktop: 2.5rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+This design system establishes a high-performance, holographic personal AI operating environment engineered for split-second tactical cognition, autonomous agent orchestration, and deep ambient intelligence. The interface balances high-density data telemetry with cinematic clarity, avoiding visual noise in favor of functional precision.
+
+### Aesthetic Paradigm
+- **Tactical Cybernetic Minimalism:** Structural grids, geometric framing, and precise data density combined with generous spatial padding around focal insights.
+- **Luminous Holographic Layering:** Frosted dark-tinted glassmorphism running over deep OLED negative space, illuminated by directed cyan photonic accents and restrained ambient state halos.
+- **Instrument-Grade Feedback:** Kinetic micro-animations, real-time waveform oscillations, segmented progress indicators, and corner-reticle framing reminiscent of aerospace heads-up displays (HUDs).
+
+### Emotional Tone
+- **Omniscient & Immediate:** Evokes absolute command, low latency, and hyper-reliable executive capability.
+- **Silent & Non-Intrusive:** Ambient background operations whisper through micro-telemetry; active directives command luminous prominence.
+
+## Colors
+
+The color architecture is built around true OLED depths, high-transmission cyan luminescence, and specialized operational status anchors.
+
+### Core Canvas & Surfaces
+- **Void Canvas (`#05080D`):** Base canvas layer for absolute contrast and zero-emission power optimization on OLED displays.
+- **Base Surface (`#080D14`):** Opaque container baseline for foundational structures and underlays.
+- **Glass Panel Surface (`rgba(10, 18, 30, 0.75)`): Primary floating viewport container with background blur.
+- **Elevated Glass Surface (`rgba(13, 27, 46, 0.60)`): Popovers, active HUD cards, and floating control nodes.
+
+### Accent & Telemetry
+- **Electric Cyan (`#00F0FF`):** High-priority focus, active conversational nodes, waveform peaks, and system highlights.
+- **Ice Blue (`#70E2FF`):** Secondary interactive triggers, hover accents, and soft data readouts.
+- **Tech Slate (`#4A607A`):** Low-contrast structural borders, bracket ticks, dormant states, and unit annotations.
+- **Pure White (`#FFFFFF`):** High-emphasis transcript text, key metrics, and primary values.
+
+### Operational State Tokens
+- **Active / Synced (`#00E599`):** Stable telemetry, verified cryptographic links, operational neural channels.
+- **Standby / Inference (`#FFB020`):** Model processing, prompt distillation, deferred actions.
+- **Interrupted / Error (`#FF3B56`):** Hardware disconnection, critical threshold breach, command override required.
+
+## Typography
+
+The typography strategy separates natural human comprehension from machine telemetry.
+
+### Type Hierarchy Roles
+- **Display & Headlines (`Outfit`):** Geometric, precise sans-serif providing an authoritative yet clean modern aesthetic for system directives, AI identity announcements, and primary interface landmarks.
+- **Narrative & Interaction (`Inter`):** Neutral, hyper-legible humanist sans-serif optimized for continuous dynamic conversational streams, system transcripts, and setting dialogues.
+- **Telemetry & Technical Annotations (`JetBrains Mono`):** Monospaced code engine used exclusively for timestamps, geospatial telemetry, vector tokens, network latency counters, status pills, and HUD frame coordinates. Render all labels in uppercase with explicit tracking (`0.04em` to `0.08em`).
+
+## Layout & Spacing
+
+This design system uses a fluid viewport framework structured around a 12-column tactical responsive grid for desktop and tablet viewports, collapsing to a single-column operational cockpit on mobile devices.
+
+### Grid & Breakpoints
+- **Mobile (`< 768px`):** 4-column layout, compact outer margins (`1rem`), and fixed-bottom thumb action rails for voice capture and model control.
+- **Tablet (`768px – 1199px`):** 8-column layout with pinned telemetry sidebars and split conversation/visualizer surfaces.
+- **Desktop (`≥ 1200px`):** 12-column layout flanked by left-rail neural status, central conversational HUD, and right-rail real-time tool orchestration telemetry.
+
+### Spacing Rules
+- Micro-measurements (`space-xs`, `space-sm`) govern terminal-style status line-heights, icon brackets, and segmented chip internal gaps.
+- Macro-spacers (`space-md`, `space-lg`, `space-xl`) define compartmental boundaries between distinct HUD containers and visualizer streams.
+
+## Elevation & Depth
+
+Depth is established strictly through physical optics: backdrop transmission, refraction blurs, and localized photonic illumination rather than traditional dark drop shadows.
+
+### Elevation Architecture
+- **Surface Level 0 (Base Canvas):** `#05080D` void with faint ambient SVG matrix grid pattern at 4% opacity.
+- **Surface Level 1 (HUD Sub-panels):** `rgba(10, 18, 30, 0.75)` with `16px` backdrop filter blur and an ultra-fine border of `1px solid rgba(0, 240, 255, 0.12)`.
+- **Surface Level 2 (Floating Cockpit Cards / Overlays):** `rgba(13, 27, 46, 0.60)` with `24px` backdrop blur, `1px solid rgba(112, 226, 255, 0.25)`, and a faint photonic outer glow: `box-shadow: 0 0 24px -4px rgba(0, 240, 255, 0.10)`.
+- **Surface Level 3 (Active Attention Directives / Modal Focus):** High-opacity frosted paneling wrapped in an active border highlight: `1px solid rgba(0, 240, 255, 0.60)` with an outer glow aura: `box-shadow: 0 0 32px 0 rgba(0, 240, 255, 0.20)`.
+
+### Border Glow Philosophy
+All borders are ultra-fine hairline constructions (`1px`). Avoid solid opaque border strokes; use alpha-channel cyan or slate gradients (`linear-gradient(135deg, rgba(0,240,255,0.3) 0%, rgba(74,96,122,0.1) 100%)`) to emulate angled glass refraction.
+
+## Shapes
+
+The shape geometry strikes a balance between sharp military instrumentation and ergonomic digital glass.
+
+### Radii Hierarchy
+- **Base Geometry (`roundedness: 1`):** Default component radius is `0.25rem` (4px), maintaining crisp tactical silhouettes for cards, modal panes, and inputs.
+- **Action Triggers & Controls (`rounded-lg` / `0.5rem`):** Voice input bars, secondary trigger buttons, and dropdown assemblies.
+- **Status Metrics & Indicators (`rounded-full`):** Telemetry pills, notification chips, and waveform nodes use complete continuous curves to contrast against hard rectilinear HUD frames.
+
+### HUD Reticles & Corner Accents
+HUD containers incorporate decorative structural corner brackets. When applied:
+- Top-left and bottom-right corner nodes display an inverted L-bracket (4px length, 1px width) in `#00F0FF` or `#4A607A`.
+- Avoid heavy decorative bevels; corner ticks must align flush to grid lines.
+
+## Components
+
+### Buttons
+- **Primary Cybernetic CTA:** Background of `rgba(0, 240, 255, 0.12)`, border of `1px solid #00F0FF`, text in `#00F0FF` (`Outfit`, 500 weight). On hover: background shifts to `#00F0FF`, text inverts to `#05080D`, accompanied by a `0 0 16px rgba(0, 240, 255, 0.40)` glow.
+- **Ghost Tactical CTA:** Background transparent, border of `1px solid rgba(74, 96, 122, 0.40)`, text in `#70E2FF`. On hover: border promotes to `rgba(112, 226, 255, 0.60)` with subtle background tint `rgba(112, 226, 255, 0.05)`.
+
+### Thumb Voice Action Bar
+- A persistent bottom-docked control deck spanning maximum 480px width.
+- Encased in `rgba(13, 27, 46, 0.85)` with `20px` backdrop blur, featuring a central glowing circular pulse button (56px diameter) flanked by micro-monospaced voice mode indicators ("PTT", "STREAM", "MUTE").
+- Active voice capture emits radial waveform ripples matching the primary accent color.
+
+### Audio Waveform Bars
+- Real-time frequency visualizer composed of vertical 2px bars spaced 2px apart.
+- Inactive state: `#4A607A` at 20% opacity.
+- Dynamic state: Fluid height transition with a vertical gradient from `#00F0FF` (top) to `#70E2FF` (bottom), peaking into `#FFFFFF` during high-amplitude signals.
+
+### Telemetry Badges & Status Pills
+- Micro-pill design (`rounded-full`, 20px height) featuring a 6px glowing status dot.
+- Green (`#00E599`): `SYNCED`, `ONLINE`, `NOMINAL`.
+- Amber (`#FFB020`): `THINKING`, `BUFFERING`, `STANDBY`.
+- Red (`#FF3B56`): `OVERRIDE`, `SEVERED`, `CRITICAL`.
+- Typography: `label-sm` in `JetBrains Mono` with uppercase tracking.
+
+### HUD Cards with Reticle Brackets
+- Structural panels built with `rgba(10, 18, 30, 0.75)` backgrounds.
+- Include localized quadrant brackets: 1px geometric corner lines offset by 2px from the panel edge.
+- Header bar features an uppercase monospaced telemetry tracker (`SYS.REF // 884-A`) alongside the title.
+
+### Input Fields
+- Understated glass surface (`rgba(5, 8, 13, 0.60)`) with an inset `1px` border of `rgba(74, 96, 122, 0.30)`.
+- Focus state: Instant transition to `1px solid #00F0FF` with a subtle interior illumination flare.
+- Text input uses `Inter` for general prose, transitioning to `JetBrains Mono` when commands or query prefixes (`/`, `--`) are detected.
+
+### Segmented Activity Rings
+- Circular SVG progress meters with 4 to 12 disconnected tick segments.
+- Segments cycle illumination sequentially during background inference tasks, giving immediate tactile readouts of compute allocation.

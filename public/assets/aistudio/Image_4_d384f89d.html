@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0f141b;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes pulse-cyan{0%,100%{opacity:1;box-shadow:0 0 10px #00f0ff;}50%{opacity:0.35;box-shadow:0 0 2px #00f0ff;}}@keyframes wave-bounce{0%,100%{height:4px;}50%{height:16px;}}.glow-dot{animation:pulse-cyan 2s infinite ease-in-out;}.wave-1{animation:wave-bounce 1.1s infinite ease-in-out;}.wave-2{animation:wave-bounce 0.8s infinite ease-in-out 0.2s;}.wave-3{animation:wave-bounce 1.3s infinite ease-in-out 0.4s;}.wave-4{animation:wave-bounce 0.9s infinite ease-in-out 0.1s;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Outfit:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#f1f6ff", "on-tertiary": "#1b324a", "surface-bright": "#343942", "inverse-primary": "#006970", "surface": "#0f141b", "on-surface-variant": "#b9cacb", "on-primary-container": "#006970", "on-secondary-fixed": "#001f26", "outline": "#849495", "on-secondary-fixed-variant": "#004e5d", "on-error": "#690005", "on-surface": "#dee2ed", "secondary-fixed": "#adecff", "tertiary-container": "#c4dbfa", "secondary": "#62d5f2", "background": "#0f141b", "inverse-surface": "#dee2ed", "secondary-fixed-dim": "#62d5f2", "surface-tint": "#00dbe9", "on-primary-fixed-variant": "#004f54", "surface-container-highest": "#30353d", "surface-dim": "#0f141b", "surface-container-lowest": "#090e16", "error": "#ffb4ab", "on-error-container": "#ffdad6", "on-tertiary-fixed-variant": "#324861", "outline-variant": "#3b494b", "on-tertiary-fixed": "#031d34", "on-secondary-container": "#002e38", "on-background": "#dee2ed", "on-tertiary-container": "#4a607a", "surface-container-low": "#171c23", "error-container": "#93000a", "primary-fixed": "#7df4ff", "on-primary-fixed": "#002022", "on-primary": "#00363a", "tertiary-fixed-dim": "#b2c8e6", "secondary-container": "#079eb9", "primary": "#dbfcff", "tertiary-fixed": "#d1e4ff", "surface-container-high": "#252a32", "primary-container": "#00f0ff", "primary-fixed-dim": "#00dbe9", "surface-variant": "#30353d", "surface-container": "#1b2027", "on-secondary": "#003640", "inverse-on-surface": "#2c3139" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-desktop": "2.5rem", "space-xl": "2.5rem", "gutter-tablet": "1.25rem", "space-xs": "0.25rem", "margin-tablet": "1.5rem", "gutter": "1rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "1rem", "space-lg": "1.5rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "label-sm": ["JetBrains Mono"], "display-lg-mobile": ["Outfit"], "label-lg": ["JetBrains Mono"], "headline-lg": ["Outfit"], "body-md": ["Inter"], "headline-md": ["Outfit"], "body-lg": ["Inter"], "headline-sm": ["Outfit"], "body-sm": ["Inter"], "label-md": ["JetBrains Mono"], "display-lg": ["Outfit"] }, "fontSize": { "label-sm": ["9px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "500" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl"><div class="h-20 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="JARVIS Nexus Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwJixHXUv4MyMGCcRs2sJdMCiUNV3TlnHhIOC9HQCg4M2fUT88w6SrRl377ilvlHwIW8Z_SmdE_k_aDJjP50tTUN--tkUEzEwhEhimP6JOPdSLjF9F_6cqDelbH1cmEF2_xNul61PH7IQeRGcYyb68Zx8OcXPtHHoAR_pMC6PXkP3pKvAewuls0jXC1r2BbnO-yPoRGeO-RDE9-uN6hy7W9zHmz02yquOdmnuE0Wn61pNH0d8Blz_kVcI"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-md text-label-md text-secondary tracking-widest">NEXUS-V4.2</span><span class="w-1.5 h-1.5 rounded-full bg-primary-container glow-dot"></span><span class="font-headline-sm text-headline-sm text-on-surface hidden sm:inline-block">Diagnostics</span></div><span class="font-label-sm text-label-sm text-secondary-fixed-dim/90 tracking-tighter">ONLINE // NEURAL SYNC: 99.8%</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center gap-space-xs bg-surface-container-high/60 px-space-sm py-space-xs rounded-full backdrop-blur-md"><div class="flex items-center text-primary-fixed-dim"><span class="material-symbols-outlined text-[14px]">battery_charging_full</span><span class="font-label-sm text-label-sm text-on-surface ml-0.5">98%</span></div><span class="text-outline-variant font-label-sm text-label-sm">|</span><div class="flex items-center text-secondary"><span class="material-symbols-outlined text-[13px]">speed</span><span class="font-label-sm text-label-sm text-on-surface ml-0.5">14ms</span></div><span class="text-outline-variant font-label-sm text-label-sm">|</span><span class="material-symbols-outlined text-primary-container text-[14px]">mic</span><span class="material-symbols-outlined text-secondary-fixed-dim text-[14px]">hub</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-44 bg-surface flex-1 min-h-screen"><div class="flex flex-col w-full px-gutter pb-8 gap-space-lg">
+<!-- System Status Banner & Holographic Calibration Reticle Header -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high/60 backdrop-blur-xl p-space-md shadow-lg flex flex-col gap-space-sm">
+<div class="absolute -right-10 -top-10 w-44 h-44 rounded-full bg-primary-container/10 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container glow-dot"></span>
+<span class="font-label-md text-label-md text-secondary tracking-widest uppercase">DIAGNOSTIC MATRIX // SYS.09</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-lowest/80 px-space-xs py-0.5 rounded-full">
+<span class="material-symbols-outlined text-secondary text-[14px]">verified</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed">INTEGRITY 100%</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-md pt-space-xs">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Diagnostics &amp; Nodes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active quantum-secured telemetry and sensory telemetry fabric</span>
+</div>
+<!-- Tactical Reticle SVG inspired by telemetry design -->
+<div class="relative w-14 h-14 flex items-center justify-center shrink-0">
+<svg class="w-full h-full animate-[spin_18s_linear_infinite]" fill="none" viewbox="0 0 100 100">
+<circle class="text-secondary/20" cx="50" cy="50" r="44" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></circle>
+<circle class="text-primary-container/40" cx="50" cy="50" r="34" stroke="currentColor" stroke-dasharray="14 10" stroke-width="2"></circle>
+<circle class="text-secondary" cx="50" cy="50" r="22" stroke="currentColor" stroke-width="1.5"></circle>
+<line class="text-primary-container" stroke="currentColor" stroke-width="2.5" x1="50" x2="50" y1="2" y2="18"></line>
+<line class="text-primary-container" stroke="currentColor" stroke-width="2.5" x1="50" x2="50" y1="82" y2="98"></line>
+<line class="text-primary-container" stroke="currentColor" stroke-width="2.5" x1="2" x2="18" y1="50" y2="50"></line>
+<line class="text-primary-container" stroke="currentColor" stroke-width="2.5" x1="82" x2="98" y1="50" y2="50"></line>
+</svg>
+<div class="absolute w-3.5 h-3.5 rounded-full bg-primary-container/90 glow-dot"></div>
+</div>
+</div>
+<!-- Monospace Terminal Health Line -->
+<div class="bg-surface-container-lowest/90 rounded-lg p-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant overflow-x-auto">
+<div class="flex items-center gap-space-xs truncate">
+<span class="text-primary-container font-mono">&gt;</span>
+<span class="text-secondary font-mono tracking-wide truncate">WS://NEXUS.CORE:443</span>
+<span class="text-outline-variant">|</span>
+<span class="text-on-surface font-mono">TLS 1.3 / ChaCha20</span>
+</div>
+<div class="flex items-center gap-1 shrink-0 text-primary-fixed-dim pl-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>PING 8ms</span>
+</div>
+</div>
+</div>
+<!-- Section 1: Health Matrix Segmented Telemetry Cards -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">speed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">HARDWARE TELEMETRY &amp; LATENCY</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim">POLL: 60Hz</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Card 1: Neural Engine Latency -->
+<div class="bg-surface-container-high/40 rounded-xl p-space-sm flex flex-col justify-between relative overflow-hidden backdrop-blur-md">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Neural Latency</span>
+<span class="material-symbols-outlined text-[14px] text-primary-container">bolt</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">14</span>
+<span class="font-label-sm text-label-sm text-secondary">ms</span>
+<span class="ml-auto text-[9px] font-label-sm px-1.5 py-0.5 rounded-full bg-primary-container/15 text-primary-container font-semibold">OPTIMAL</span>
+</div>
+<!-- Progress segments -->
+<div class="flex gap-1 h-1.5 w-full mt-1">
+<div class="flex-1 rounded-full bg-primary-container"></div>
+<div class="flex-1 rounded-full bg-primary-container"></div>
+<div class="flex-1 rounded-full bg-primary-container"></div>
+<div class="flex-1 rounded-full bg-surface-container-highest"></div>
+<div class="flex-1 rounded-full bg-surface-container-highest"></div>
+</div>
+</div>
+<!-- Card 2: Memory Footprint -->
+<div class="bg-surface-container-high/40 rounded-xl p-space-sm flex flex-col justify-between relative overflow-hidden backdrop-blur-md">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">RAM Footprint</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">memory</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">218</span>
+<span class="font-label-sm text-label-sm text-secondary">MB</span>
+<span class="ml-auto text-[9px] font-label-sm px-1.5 py-0.5 rounded-full bg-secondary-container/20 text-secondary-fixed font-semibold">/ 4 GB</span>
+</div>
+<!-- Progress segments -->
+<div class="flex gap-1 h-1.5 w-full mt-1">
+<div class="flex-1 rounded-full bg-secondary"></div>
+<div class="flex-1 rounded-full bg-surface-container-highest"></div>
+<div class="flex-1 rounded-full bg-surface-container-highest"></div>
+<div class="flex-1 rounded-full bg-surface-container-highest"></div>
+<div class="flex-1 rounded-full bg-surface-container-highest"></div>
+</div>
+</div>
+<!-- Card 3: Packet Loss -->
+<div class="bg-surface-container-high/40 rounded-xl p-space-sm flex flex-col justify-between relative overflow-hidden backdrop-blur-md">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Packet Drop</span>
+<span class="material-symbols-outlined text-[14px] text-primary-fixed-dim">wifi_tethering</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">0.00</span>
+<span class="font-label-sm text-label-sm text-secondary">%</span>
+<span class="ml-auto text-[9px] font-label-sm px-1.5 py-0.5 rounded-full bg-primary-container/15 text-primary-container font-semibold">ZERO-ERR</span>
+</div>
+<div class="flex gap-1 h-1.5 w-full mt-1">
+<div class="flex-1 rounded-full bg-primary-container"></div>
+<div class="flex-1 rounded-full bg-primary-container"></div>
+<div class="flex-1 rounded-full bg-primary-container"></div>
+<div class="flex-1 rounded-full bg-primary-container"></div>
+<div class="flex-1 rounded-full bg-primary-container"></div>
+</div>
+</div>
+<!-- Card 4: Audio Buffer Jitter -->
+<div class="bg-surface-container-high/40 rounded-xl p-space-sm flex flex-col justify-between relative overflow-hidden backdrop-blur-md">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Buffer Jitter</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">graphic_eq</span>
+</div>
+<div class="my-space-xs flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">1.2</span>
+<span class="font-label-sm text-label-sm text-secondary">ms</span>
+<span class="ml-auto text-[9px] font-label-sm px-1.5 py-0.5 rounded-full bg-primary-container/15 text-primary-container font-semibold">SYNCED</span>
+</div>
+<div class="flex gap-1 h-1.5 w-full mt-1">
+<div class="flex-1 rounded-full bg-primary-container"></div>
+<div class="flex-1 rounded-full bg-surface-container-highest"></div>
+<div class="flex-1 rounded-full bg-surface-container-highest"></div>
+<div class="flex-1 rounded-full bg-surface-container-highest"></div>
+<div class="flex-1 rounded-full bg-surface-container-highest"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Sensory Hardware & System REST Permissions -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">security</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SENSORY HARDWARE &amp; ACCESS POLICIES</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-container">4 ACTIVE</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Permission 1: Vocal Audio Feed -->
+<div class="bg-surface-container-high/40 rounded-xl p-space-md backdrop-blur-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-container/15 flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Microphone &amp; Vocal Feed</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed">GRANTED // Exclusive Raw 48kHz Stream</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container glow-dot shrink-0 mt-1"></span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-highest/60 text-secondary hover:bg-surface-container-highest active:scale-95 transition-all text-label-sm font-label-sm" id="testAudioBtn">
+<span class="material-symbols-outlined text-[14px]">volume_up</span>
+<span id="testAudioLabel">CALIBRATE ECHO</span>
+</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-lowest/80 text-on-surface-variant hover:text-error active:scale-95 transition-all text-label-sm font-label-sm">
+            REVOKE ACCESS
+          </button>
+</div>
+</div>
+<!-- Permission 2: Local Filesystem Access -->
+<div class="bg-surface-container-high/40 rounded-xl p-space-md backdrop-blur-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[20px]">folder_managed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Local Filesystem Boundary</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">RESTRICTED // Sandboxed to /workspace/</span>
+</div>
+</div>
+<button aria-label="Toggle Filesystem Sandbox" class="w-10 h-5 rounded-full bg-secondary-container flex items-center p-0.5 transition-all" id="fsToggle">
+<div class="w-4 h-4 rounded-full bg-on-secondary ml-auto transition-all" id="fsKnob"></div>
+</button>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant bg-surface-container-lowest/60 px-space-xs py-1 rounded-lg">
+<span class="text-secondary-fixed">Read-Write: /workspace/*</span>
+<span class="text-error font-mono">ROOT LOCKED</span>
+</div>
+</div>
+<!-- Permission 3: External Search & Web Access -->
+<div class="bg-surface-container-high/40 rounded-xl p-space-md backdrop-blur-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-container/15 flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">travel_explore</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">External Web Synthesis</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed">ENABLED // Zero-Telemetry Encrypted Proxy</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary-container text-[20px]">check_circle</span>
+</div>
+<!-- Permission 4: Background Daemon Execution -->
+<div class="bg-surface-container-high/40 rounded-xl p-space-md backdrop-blur-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Autonomous Daemon Hub</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">RUNNING // PID: 40912 (Priority: High)</span>
+</div>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-primary-container bg-primary-container/10 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container glow-dot"></span>
+<span>SPAWNED</span>
+</div>
+</div>
+<!-- Realistic Denied State / Re-calibration Tile -->
+<div class="bg-surface-container-high/30 rounded-xl p-space-sm backdrop-blur-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-error-container/40 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[18px]">videocam_off</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Optic Sensor Video Stream</span>
+<span class="font-label-sm text-label-sm text-error">PERMISSION DENIED (USER_BLOCKED)</span>
+</div>
+</div>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-highest text-secondary-fixed text-label-sm font-label-sm active:scale-95 transition-all" id="retryCameraBtn">
+          RE-CALIBRATE
+        </button>
+</div>
+</div>
+</div>
+<!-- Section 3: Secure Quantum Device Pairing & Active Nodes -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">devices_other</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SECURE NODE TOPOLOGY</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim">2 PAIRED</span>
+</div>
+<!-- Quantum Pairing Initiation Reticle Block -->
+<div class="bg-surface-container-high/40 rounded-xl p-space-md backdrop-blur-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Pair New Compute Rig</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sync workstation neural model or ambient HUD</span>
+</div>
+<button class="flex items-center gap-1.5 px-space-sm py-1.5 rounded-full bg-primary-container text-on-primary font-headline-sm text-[13px] font-semibold active:scale-95 transition-all shadow-md" id="toggleQrBtn">
+<span class="material-symbols-outlined text-[16px]">qr_code_scanner</span>
+<span>PAIR NODE</span>
+</button>
+</div>
+<!-- Collapsible QR Code Scan Reticle Box -->
+<div class="hidden flex flex-col items-center justify-center py-space-md bg-surface-container-lowest/80 rounded-xl relative" id="pairingReticleBox">
+<div class="relative w-44 h-44 flex items-center justify-center p-2 bg-surface-container-low rounded-lg">
+<!-- Corner reticles -->
+<div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-primary-container"></div>
+<div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-primary-container"></div>
+<div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-primary-container"></div>
+<div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-primary-container"></div>
+<!-- Mock Holographic QR Code Pattern SVG -->
+<svg class="w-full h-full text-secondary" fill="currentColor" viewbox="0 0 100 100">
+<rect fill="none" height="24" rx="2" stroke="currentColor" stroke-width="4" width="24" x="10" y="10"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="16" y="16"></rect>
+<rect fill="none" height="24" rx="2" stroke="currentColor" stroke-width="4" width="24" x="66" y="10"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="72" y="16"></rect>
+<rect fill="none" height="24" rx="2" stroke="currentColor" stroke-width="4" width="24" x="10" y="66"></rect>
+<rect fill="currentColor" height="12" rx="1" width="12" x="16" y="72"></rect>
+<!-- Data dots -->
+<rect height="6" width="6" x="42" y="12"></rect>
+<rect height="6" width="6" x="52" y="12"></rect>
+<rect height="12" width="6" x="42" y="24"></rect>
+<rect height="6" width="6" x="12" y="42"></rect>
+<rect height="6" width="6" x="24" y="42"></rect>
+<rect height="6" width="12" x="36" y="42"></rect>
+<rect height="8" width="8" x="54" y="42"></rect>
+<rect height="16" width="6" x="70" y="42"></rect>
+<rect height="6" width="6" x="82" y="42"></rect>
+<rect height="14" width="6" x="42" y="56"></rect>
+<rect height="6" width="6" x="54" y="56"></rect>
+<rect height="6" width="10" x="66" y="66"></rect>
+<rect height="8" width="8" x="80" y="66"></rect>
+<rect height="6" width="14" x="42" y="76"></rect>
+<rect height="8" width="8" x="66" y="80"></rect>
+<rect height="8" width="8" x="80" y="80"></rect>
+</svg>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary-container/10 to-transparent animate-pulse pointer-events-none"></div>
+</div>
+<span class="mt-space-sm font-label-sm text-label-sm text-secondary tracking-widest uppercase">SCAN RETICLE WITH NEXUS APP</span>
+<span class="font-mono text-[10px] text-on-surface-variant">NONCE: 0x9fA2..b1C8 (VALID 89s)</span>
+</div>
+<!-- Active Node 1: MacBook Pro -->
+<div class="bg-surface-container-lowest/60 rounded-xl p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">laptop_mac</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-md text-body-md text-on-surface font-semibold">MacBook Pro M3 Max</span>
+<span class="text-[9px] font-label-sm px-1.5 py-0.2 rounded-full bg-primary-container/15 text-primary-container">PRIMARY</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">192.168.1.104 // RSA-4096 VALID</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary-fixed">SYNCED</span>
+<span class="w-2 h-2 rounded-full bg-primary-container glow-dot"></span>
+</div>
+</div>
+<!-- Active Node 2: Ambient Glass Display -->
+<div class="bg-surface-container-lowest/60 rounded-xl p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">tv</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-body-md text-body-md text-on-surface font-semibold">Smart Ambient Glass</span>
+<span class="text-[9px] font-label-sm px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant">HUD</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">192.168.1.189 // STANDBY</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline">IDLE</span>
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Vocal Calibration & Biometric Signature -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">record_voice_over</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">WAKE-WORD &amp; BIOMETRICS</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary-fixed">
+<span class="material-symbols-outlined text-[13px] text-primary-container">fingerprint</span>
+<span>VOICE MATCH: 98.6%</span>
+</div>
+</div>
+<div class="bg-surface-container-high/40 rounded-xl p-space-md backdrop-blur-md flex flex-col gap-space-md">
+<!-- Wake-Word Profile -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase">Active Wake Trigger</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">"Hey JARVIS"</span>
+</div>
+<div class="flex items-center gap-1.5 bg-primary-container/15 px-space-sm py-1 rounded-full text-primary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>BIOMETRIC LOCKED</span>
+</div>
+</div>
+<!-- Ambient Sensitivity Calibration Slider -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">AMBIENT NOISE SUPPRESSION THRESHOLD</span>
+<span class="text-secondary font-mono" id="thresholdVal">-42 dB</span>
+</div>
+<div class="relative w-full h-6 flex items-center">
+<input class="w-full accent-primary-container bg-surface-container-lowest h-2 rounded-full cursor-pointer appearance-none" id="noiseSlider" max="90" min="10" type="range" value="68"/>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>SENSITIVE (-12dB)</span>
+<span>TACTICAL FILTER (-64dB)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 5: Zero-Persistence Security & Emergency Purge -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">privacy_tip</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">PRIVACY &amp; VOLATILITY CONTROLS</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim">ENCRYPTED</span>
+</div>
+<div class="bg-surface-container-high/40 rounded-xl p-space-md backdrop-blur-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col pr-2">
+<span class="font-body-md text-body-md text-on-surface font-medium">Zero-Telemetry Policy</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">All vector embeddings wiped on termination. No external telemetry stored.</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary-fixed font-label-sm text-label-sm font-semibold shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container glow-dot"></span>
+<span>ENFORCED</span>
+</div>
+</div>
+<div class="h-[1px] w-full bg-outline-variant/30"></div>
+<!-- Emergency Purge Button Trigger -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-error font-medium">Purge Local Memory Cache</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Immediate flush of RAM conversation buffers</span>
+</div>
+<button class="px-space-md py-1.5 rounded-full bg-error-container text-on-error font-label-sm text-label-sm font-semibold active:scale-95 transition-all shadow-md flex items-center gap-1" id="purgeBtn">
+<span class="material-symbols-outlined text-[15px]">delete_forever</span>
+<span>PURGE</span>
+</button>
+</div>
+<!-- Emergency Modal Dialog Simulated Inline -->
+<div class="hidden flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest border-0 shadow-2xl" id="purgeModal">
+<div class="flex items-center gap-space-xs text-error">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+<span class="font-headline-sm text-headline-sm font-semibold">Confirm Volatile Memory Wipe</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          This operation resets all cached context, current conversational states, and local scratchpad memory. This cannot be undone.
+        </span>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm" id="cancelPurgeBtn">
+            CANCEL
+          </button>
+<button class="px-space-md py-1.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold active:scale-95 transition-all" id="confirmPurgeBtn">
+            EXECUTE PURGE
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // UI Micro-interactions and state handling
+  const toggleQrBtn = document.getElementById('toggleQrBtn');
+  const pairingReticleBox = document.getElementById('pairingReticleBox');
+  if (toggleQrBtn && pairingReticleBox) {
+    toggleQrBtn.addEventListener('click', () => {
+      pairingReticleBox.classList.toggle('hidden');
+      if (!pairingReticleBox.classList.contains('hidden')) {
+        toggleQrBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">close</span><span>COLLAPSE</span>';
+      } else {
+        toggleQrBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">qr_code_scanner</span><span>PAIR NODE</span>';
+      }
+    });
+  }
+
+  // Audio Test calibration toggle simulation
+  const testAudioBtn = document.getElementById('testAudioBtn');
+  const testAudioLabel = document.getElementById('testAudioLabel');
+  let testing = false;
+  if (testAudioBtn && testAudioLabel) {
+    testAudioBtn.addEventListener('click', () => {
+      testing = !testing;
+      if (testing) {
+        testAudioLabel.textContent = 'TRANSMITTING CHIRP...';
+        testAudioBtn.classList.add('text-primary-container', 'bg-primary-container/20');
+        setTimeout(() => {
+          testAudioLabel.textContent = 'LATENCY: 1.1ms NOMINAL';
+          setTimeout(() => {
+            testAudioLabel.textContent = 'CALIBRATE ECHO';
+            testAudioBtn.classList.remove('text-primary-container', 'bg-primary-container/20');
+            testing = false;
+          }, 2000);
+        }, 1200);
+      }
+    });
+  }
+
+  // Filesystem sandbox toggle
+  const fsToggle = document.getElementById('fsToggle');
+  const fsKnob = document.getElementById('fsKnob');
+  let sandboxed = true;
+  if (fsToggle && fsKnob) {
+    fsToggle.addEventListener('click', () => {
+      sandboxed = !sandboxed;
+      if (sandboxed) {
+        fsKnob.classList.remove('mr-auto');
+        fsKnob.classList.add('ml-auto');
+        fsToggle.classList.remove('bg-surface-container-highest');
+        fsToggle.classList.add('bg-secondary-container');
+      } else {
+        fsKnob.classList.remove('ml-auto');
+        fsKnob.classList.add('mr-auto');
+        fsToggle.classList.remove('bg-secondary-container');
+        fsToggle.classList.add('bg-surface-container-highest');
+      }
+    });
+  }
+
+  // Noise Slider
+  const noiseSlider = document.getElementById('noiseSlider');
+  const thresholdVal = document.getElementById('thresholdVal');
+  if (noiseSlider && thresholdVal) {
+    noiseSlider.addEventListener('input', (e) => {
+      const val = Math.round(-10 - (e.target.value * 0.7));
+      thresholdVal.textContent = val + ' dB';
+    });
+  }
+
+  // Camera re-calibrate test feedback
+  const retryCameraBtn = document.getElementById('retryCameraBtn');
+  if (retryCameraBtn) {
+    retryCameraBtn.addEventListener('click', () => {
+      retryCameraBtn.textContent = 'PROMPTING OS...';
+      setTimeout(() => {
+        retryCameraBtn.textContent = 'WAITING PRIVILEGE';
+      }, 1000);
+    });
+  }
+
+  // Purge Dialog Logic
+  const purgeBtn = document.getElementById('purgeBtn');
+  const purgeModal = document.getElementById('purgeModal');
+  const cancelPurgeBtn = document.getElementById('cancelPurgeBtn');
+  const confirmPurgeBtn = document.getElementById('confirmPurgeBtn');
+
+  if (purgeBtn && purgeModal) {
+    purgeBtn.addEventListener('click', () => {
+      purgeModal.classList.remove('hidden');
+      purgeModal.classList.add('flex');
+    });
+  }
+  if (cancelPurgeBtn && purgeModal) {
+    cancelPurgeBtn.addEventListener('click', () => {
+      purgeModal.classList.add('hidden');
+      purgeModal.classList.remove('flex');
+    });
+  }
+  if (confirmPurgeBtn && purgeModal) {
+    confirmPurgeBtn.addEventListener('click', () => {
+      confirmPurgeBtn.textContent = 'PURGING...';
+      setTimeout(() => {
+        purgeModal.classList.add('hidden');
+        purgeModal.classList.remove('flex');
+        confirmPurgeBtn.textContent = 'EXECUTE PURGE';
+        const flash = document.createElement('div');
+        flash.className = 'fixed top-24 left-1/2 -translate-x-1/2 px-4 py-2 bg-primary-container text-on-primary-fixed rounded-full font-label-sm text-label-sm font-semibold shadow-xl z-50';
+        flash.textContent = 'CONTEXT CACHE FLUSHED (0 BYTES RETAINED)';
+        document.body.appendChild(flash);
+        setTimeout(() => flash.remove(), 2500);
+      }, 800);
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl" data-active-classes="text-primary-container drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] font-semibold"><div class="max-w-md mx-auto px-gutter pt-space-xs pb-space-xs flex flex-col gap-space-xs"><div class="flex items-center justify-between bg-surface-container-low/75 rounded-full px-space-md py-space-xs"><div class="flex items-center gap-space-xs"><div class="flex items-end gap-[2px] h-4 w-12 px-space-xs justify-center"><div class="w-[2px] bg-primary-container rounded-full wave-1"></div><div class="w-[2px] bg-secondary rounded-full wave-2"></div><div class="w-[2px] bg-primary rounded-full wave-3"></div><div class="w-[2px] bg-secondary-container rounded-full wave-4"></div></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">VOX: READY</span></div><div class="flex items-center gap-space-sm"><button class="w-11 h-11 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container transition-all active:scale-95"><span class="material-symbols-outlined text-[22px]">mic</span></button><button class="h-9 px-space-sm rounded-full bg-surface-container-highest/60 flex items-center gap-1 text-error active:scale-95"><span class="material-symbols-outlined text-[16px]">stop_circle</span><span class="font-label-sm text-label-sm">HALT</span></button></div></div><div class="flex justify-around items-center h-14"><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-all" data-path="core-hud" href="#"><span class="material-symbols-outlined text-[20px]">view_in_ar</span><span class="font-label-sm text-label-sm">Core HUD</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-all" data-path="transcript" href="#"><span class="material-symbols-outlined text-[20px]">forum</span><span class="font-label-sm text-label-sm">Transcript</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-all" data-path="command" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span><span class="font-label-sm text-label-sm">Command</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] transition-all text-primary-container drop-shadow-[0_0_8px_rgba(0,240,255,0.6)] font-semibold" data-path="diagnostics" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-sm text-label-sm">Diagnostics</span></a></div></div></nav></body></html>
